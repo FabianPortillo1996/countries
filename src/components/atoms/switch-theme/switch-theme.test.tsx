@@ -35,16 +35,20 @@ describe('<SwitchTheme />', () => {
   });
 
   // Renders a button with a moon icon and 'Dark Mode' text when the theme is light
-  it('should render a button with a moon icon and "Dark Mode" text when the theme is light',  async () => {
+  it('should render a button with a moon icon and "Dark Mode" text when the theme is light', async () => {
     render(<SwitchTheme />);
+
+    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       expect(screen.getByRole('button')).toBeInTheDocument();
     });
+    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       expect(screen.getByRole('button')).toContainElement(
         screen.getByRole('img'),
       );
     });
+    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       expect(screen.getByRole('button')).toHaveTextContent('Dark Mode');
     });
@@ -64,11 +68,14 @@ describe('<SwitchTheme />', () => {
     render(<SwitchTheme />);
 
     // Assert that the button with sun icon and 'Light Mode' text is rendered
+    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       expect(screen.getByRole('button')).toBeInTheDocument();
+      // eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
       expect(screen.getByRole('button')).toContainElement(
         screen.getByRole('img'),
       );
+      // eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
       expect(screen.getByRole('button')).toHaveTextContent('Light Mode');
     });
   });
@@ -88,11 +95,14 @@ describe('<SwitchTheme />', () => {
     render(<SwitchTheme />);
 
     // Click the button
+    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       const button = screen.getByRole('button');
+      // eslint-disable-next-line testing-library/no-wait-for-side-effects
       fireEvent.click(button);
     });
 
+    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       expect(setTheme).toHaveBeenCalledWith(Theme.dark);
     });
@@ -121,6 +131,7 @@ describe('<SwitchTheme />', () => {
     render(<SwitchTheme />);
 
     // Assert that the component is rendered without errors
+    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       expect(screen.getByRole('button')).toBeInTheDocument();
     });
@@ -140,6 +151,7 @@ describe('<SwitchTheme />', () => {
     render(<SwitchTheme />);
 
     // Assert that the component is rendered without errors
+    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       expect(screen.getByRole('button')).toBeInTheDocument();
     });
