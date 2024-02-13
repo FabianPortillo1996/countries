@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h3 align="center">Countries API Integration</h3>
+
+  <p align="center">
+    Este proyecto contiene la integración y maquetación ( mobile y desktop ) del endpoint de paises.
+Asi mismo es posible visualizar el detalle de cada uno.
+    <br />
+    <a href="https://countries-eta-beige.vercel.app">View Demo</a>
+  </p>
+</div>
+
+
+
+<!-- ABOUT THE PROJECT -->
+
+## Acerca del proyecto
+
+El enfoque que le di a nivel de componentes y visual, fue de atomic design, ello se puede ver en la carpeta
+/src/components, elemento mas grande de este enfoque son las pages, que las pueden ver en src/app.
+
+El enfoque en integración API fue una arquitectura BFF (BACK FOR FRONT) para que todas las peticiones pasen por nuestro
+servidor y las rutas finales, tokens, headers finales no quedén expuestos.
+
+Utilice Tailwind para el manejo de estilos, ya que ayuda a la mantenibilidad del CSS y que la unica preocupación sea
+construir el contenido, ademas que lo hace mas semantico.
+
+Para el manejo de información dinamica y schemas, use la libreria de zod, a diferencia de otras librerias como yup, este
+funciona en tiempo de ejecución y tiene la caracteristica de inferir tipos.
+
+Las pruebas unitarias las trabaje a nivel de componente, como roadMap se debe agregar pruebas e2e y de integracion con
+playwright, para darle cobertura a servicios y la ruta de /src/app.
+
+Lodash lo utilizo para la obtención segura de datos, y adicionalmente para funcionales que ya trae en su core.
+
+ClassNames para classes dinamicas dependiendo de comportamientos o entry-values.
+
+<!-- GETTING STARTED -->
 
 ## Getting Started
 
-First, run the development server:
+Con las siguientes instrucciones puedes correr tu proyecto en local
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is an example of how to list things you need to use the software and how to install them.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Instalación
 
-## Learn More
+2. Clona el repo
+   ```sh
+   git clone https://github.com/FabianPortillo1996/countries.git
+   ```
+3. Instala los NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `.env`
+   ```js
+   const COUNTRY_ENTRY_POINT = 'ENTER YOUR API';
+   const BFF_ENTRY_POINT = 'ENTER YOUR API';
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+<!-- ROADMAP -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [x] Responsive Design
+- [x] Lista de paises
+- [x] Detalle de pais
+- [x] Filtro y buscador
+- [x] Dark Mode
+- [ ] Testing
+    - [x] Pruebas unitarias
+    - [ ] Pruebas de integración
+    - [ ] Pruebas e2e
