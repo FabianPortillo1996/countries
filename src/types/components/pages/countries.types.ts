@@ -1,4 +1,5 @@
 import type { z } from 'zod';
+
 import type { countrySchema } from '@/schemas/country.schema';
 
 export interface CountriesSearchParams {

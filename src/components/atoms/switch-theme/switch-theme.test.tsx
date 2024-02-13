@@ -35,7 +35,7 @@ describe('<SwitchTheme />', () => {
   });
 
   // Renders a button with a moon icon and 'Dark Mode' text when the theme is light
-  it('should render a button with a moon icon and "Dark Mode" text when the theme is light', () => {
+  it('should render a button with a moon icon and "Dark Mode" text when the theme is light',  async () => {
     render(<SwitchTheme />);
     waitFor(() => {
       expect(screen.getByRole('button')).toBeInTheDocument();

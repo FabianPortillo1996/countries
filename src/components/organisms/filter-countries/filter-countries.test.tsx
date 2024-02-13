@@ -1,18 +1,8 @@
+import '../../../../_mock/routerMock';
+
 import { render, screen } from '@testing-library/react';
 
 import FilterCountries from '.';
-
-jest.mock('next/router', () => require('next-router-mock'));
-jest.mock('next/navigation', () => ({
-  ...require('next-router-mock'),
-  useSearchParams: () => {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const router = require('next-router-mock').useRouter();
-    const path = router.asPath.split('?')?.[1] ?? '';
-    return new URLSearchParams(path);
-  },
-  usePathname: jest.fn(),
-}));
 
 describe('<FilterCountries />', () => {
   // Renders a TextInput component with a search icon and a placeholder text "Search for a country...".

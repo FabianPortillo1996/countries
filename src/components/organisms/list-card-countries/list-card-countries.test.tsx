@@ -1,5 +1,6 @@
-import ListCardCountries from '.';
 import { render, screen } from '@testing-library/react';
+
+import ListCardCountries from '.';
 
 describe('<ListCardCountries />', () => {
   // Returns a list of CardCountry components for each country in the 'countries' prop
@@ -41,5 +42,4 @@ describe('<ListCardCountries />', () => {
     const cardCountries = screen.queryAllByTestId('base-card');
     expect(cardCountries.length).toBe(0);
   });
-
 });

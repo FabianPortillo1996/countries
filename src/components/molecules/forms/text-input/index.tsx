@@ -9,7 +9,8 @@ const TextInput: React.FC<TextInputProps> = ({ iconName, ...rest }) => {
   return (
     <div
       data-testid="container-input"
-      className="flex h-14 w-full flex-row items-center overflow-hidden rounded bg-white shadow-md dark:bg-dark-22 md:w-96">
+      className="flex h-14 w-full flex-row items-center overflow-hidden rounded bg-white shadow-md dark:bg-dark-22 md:w-96"
+    >
       {!!iconName && <div className="ml-4">{iconName}</div>}
       <input
         className={classNames(

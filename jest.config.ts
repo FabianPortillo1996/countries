@@ -45,8 +45,6 @@ const jestConfigWithOverrides = async () => {
   const res = await configFn();
 
   res.moduleNameMapper = {
-    // We cannot depend on the exact key used by Next.js
-    // so we inject an SVG key higher up on the mapping tree
     '\\.svg': '<rootDir>/_mock/svgrMock.ts',
     ...res.moduleNameMapper,
   };
@@ -54,5 +52,4 @@ const jestConfigWithOverrides = async () => {
   return res;
 };
 
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 export default jestConfigWithOverrides;
