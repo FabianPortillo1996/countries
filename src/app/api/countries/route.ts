@@ -4,11 +4,10 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import type { z } from 'zod';
 
+import { FIELDS_TO_GET } from '@/constants/api.constants';
 import { env } from '@/libs/env.mjs';
 import { countriesParamsSchema } from '@/schemas/country.schema';
 import type { CountriesResponse } from '@/types/api/countries.types';
-
-const FIELDS_TO_GET = 'region,name,flags,population,capital,idd';
 
 const handleGetRouteByParams = (
   params: z.infer<typeof countriesParamsSchema>,

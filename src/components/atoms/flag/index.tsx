@@ -9,11 +9,11 @@ const Flag: React.FC<FlagProps> = ({ type, url, name }) => {
   return (
     <figure
       className={classNames('relative w-full', {
-        'h-52': type === FlagType.detail,
+        'h-52 md:w-3/4 lg:w-5/12 lg:h-80': type === FlagType.detail,
         'h-36': type === FlagType.card,
       })}
     >
-      <Image src={url} alt={`${name}-flag-${type}`} fill loading="lazy" />
+      <Image src={url} alt={`${name}-flag-${type}`} fill priority />
     </figure>
   );
 };

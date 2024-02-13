@@ -13,12 +13,15 @@ const CardCountry: React.FC<CardCountryProps> = ({
   population,
   capitals,
   region,
+  id,
 }) => {
   return (
     <BaseCard>
-      <Link href="/123">
-        <Flag type={FlagType.card} name={name} url={flagUrl} />
-      </Link>
+      {flagUrl && (
+        <Link href={`/${id}`}>
+          <Flag type={FlagType.card} name={name} url={flagUrl} />
+        </Link>
+      )}
       <div className="px-5 pb-11 pt-7">
         <h1 className="mb-4 text-lg font-bold">{name}</h1>
         <ul className="text-sm font-light tracking-wide">

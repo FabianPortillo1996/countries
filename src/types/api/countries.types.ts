@@ -60,10 +60,10 @@ export interface Spa {
 }
 
 export interface Currencies {
-  COP: Cop;
+  [k: string]: Currency;
 }
 
-export interface Cop {
+export interface Currency {
   name: string;
   symbol: string;
 }
@@ -74,7 +74,7 @@ export interface Idd {
 }
 
 export interface Languages {
-  spa: string;
+  [k: string]: string;
 }
 
 export interface Translations {

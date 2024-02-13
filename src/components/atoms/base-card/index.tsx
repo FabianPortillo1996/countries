@@ -7,6 +7,7 @@ const BaseCard: React.FC<BaseCardProps> = ({ children }) => {
     <div
       className="mt-12 w-full max-w-64 cursor-pointer overflow-hidden rounded bg-white shadow-md dark:bg-dark-22 md:mb-8"
       role="button"
+      data-testid="base-card"
     >
       {children}
     </div>

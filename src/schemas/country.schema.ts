@@ -7,6 +7,12 @@ export const countrySchema = z.object({
   population: z.string().min(1),
   capitals: z.string().min(1),
   region: z.string().min(1),
+
+  domain: z.string().min(1),
+  currencies: z.string().min(1),
+  languages: z.string().min(1),
+  borderCountries: z.string().min(1),
+  subRegion: z.string().min(1),
 });
 
 export const countriesParamsSchema = z.object({

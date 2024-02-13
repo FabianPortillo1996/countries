@@ -19,11 +19,13 @@ const Dropdown: React.FC<DropdownProps> = ({
     onSelect(region);
     setIsOpen();
   };
+
   return (
     <div className="group relative inline-block w-full md:w-fit" role="group">
       <button
         onClick={setIsOpen}
         type="button"
+        data-testid="button-select"
         className="flex h-14 w-8/12 flex-row items-center justify-between rounded bg-white px-4 shadow-md focus:outline-none dark:bg-dark-22 md:w-48"
       >
         {defaultValue || label}
