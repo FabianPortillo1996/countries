@@ -73,6 +73,7 @@ This is an example of how to list things you need to use the software and how to
 - [x] Detalle de pais
 - [x] Filtro y buscador
 - [x] Dark Mode
+- [ ] MetaData por pagina, robots.txt
 - [ ] Testing
     - [x] Pruebas unitarias
     - [ ] Pruebas de integración
